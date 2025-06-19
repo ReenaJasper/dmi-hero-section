@@ -1,0 +1,53 @@
+"use client";
+
+import { motion } from "framer-motion";
+
+export default function Hero() {
+  return (
+    <section className="min-h-screen flex flex-col justify-center items-center text-center px-4 md:px-12 bg-white">
+      <motion.h1
+        className="text-4xl md:text-6xl font-bold text-gray-900"
+        initial={{ opacity: 0, y: -40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        Design Made Intelligent
+      </motion.h1>
+
+      <motion.p
+        className="mt-4 text-lg md:text-xl text-gray-600 max-w-2xl"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        From brand kit to launch-ready content, websites & apps — powered by AI.
+      </motion.p>
+
+      <motion.div
+        className="mt-8 flex flex-col md:flex-row gap-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+      >
+        <button className="px-6 py-3 bg-[#e30613] text-white font-semibold rounded-lg shadow-md hover:bg-red-700 transition duration-300">
+          Try the Demo
+        </button>
+        <button className="px-6 py-3 border border-[#e30613] text-[#e30613] font-semibold rounded-lg hover:bg-[#e30613] hover:text-white transition duration-300">
+          Join Waitlist
+        </button>
+      </motion.div>
+
+      {/* Optional Image */}
+      <motion.img
+        src="/hero-illustration.png"
+        alt="Hero Illustration"
+        className="mt-12 max-w-md w-full"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.6 }}
+      />
+    </section>
+  );
+}
+
+
